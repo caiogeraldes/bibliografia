@@ -1,0 +1,5 @@
+#!/bin/sh
+
+bibtex-tidy --curly --numeric --space=2 --align=15 --duplicates=key --merge=first --drop-all-caps --no-escape --sort-fields=title,shorttitle,author,year,month,day,journal,booktitle,location,on,publisher,address,series,volume,number,pages,doi,isbn,issn,url,urldate,copyright,category,note,metadata --strip-comments --trailing-commas --encode-urls --remove-empty-fields --wrap=80 *.bib
+
+echo "Feito!"
