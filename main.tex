@@ -1,0 +1,21 @@
+\documentclass[a4paper,14pt]{memoir}
+
+\usepackage{csquotes}
+\usepackage{fullpage}
+\usepackage{fontspec}
+\usepackage[main=brazil]{babel}
+\setmainfont{Brill}
+\usepackage{hyperref}
+
+\RequirePackage[backend=biber,
+	style=./biblatex/abnt-caio, language=brazil,
+	pretty, autolang=hyphen,
+	pretty, repeatfields, noslsn, natbib, extrayear, giveninits
+]{biblatex}
+\addbibresource{./biblio.bib}
+
+\begin{document}
+\nocite{*}
+\renewcommand*{\mkbibnamefamily}[1]{\textsc{#1}}
+\printbibliography{}
+\end{document}
