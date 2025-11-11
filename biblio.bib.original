@@ -2,6 +2,7 @@
   title = {{ Μελέτες για την ελληνική γλώσσα: πρακτικά της 23ης ετήσιας
            συνάντησης του τμήματος φιλολογίας του Αριστοτελείου Πανεπιστημίου
            Θεσσαλονίκης, 17-19 Μαΐου, 2002 }},
+  sorttitle = {Meletes gia thn ellhnikh glwssa},
   year = 2003,
   publisher = {Αφοί Κυριακίδη},
   address = {Θεσσαλονίκη},
@@ -780,6 +781,7 @@
            συνάντησης του Τομέα Γλωσσολογίας της Φιλοσοφικής Σχολής του
            Αριστοτελείου Πανεπιστημίου Θεσσαλονίκης 27-29 Απριλίου, 1987 :
            τιμητική προσφορά στον καθηγητή John Chadwick }},
+  sorttitle = {{ Meletes gia thn ellhnikh glwssa: pratika ths 8hs ethsias}},
   author = {Chadwick, John},
   year = 1987,
   publisher = {Αφοι Κυριακίδη},
@@ -4709,6 +4711,7 @@
 }
 @mastersthesis{Vasileiou2001,
   title = {Το απαρέμφατο της αρχαίας ελληνικής υπο έλεγχο},
+  sorttitle = {to aparemfato ths arxaias ellhnikhs upo elegxo},
   author = {Μ. Βασιλειου},
   sortname = {Basileiou, M},
   year = 2001,
