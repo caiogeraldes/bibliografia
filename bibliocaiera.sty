@@ -1,6 +1,10 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{bibliocaiera}[2025-12-16 Bibliocaiera]
 
+\newcommand{\selection}{}
+\DeclareOption{all}{\renewcommand{\selection}{selection=all}}
+\ProcessOptions\relax
+
 \RequirePackage[backend=biber,
 	style=./biblatex/abnt-caio, language=brazil,
 	pretty, autolang=hyphen,
@@ -20,23 +24,23 @@
 	sort={pt-BR},
 	match={entrytype={abbreviation}},
 	type={same as category},
-	selection=all
+	\selection%
 ]
 \GlsXtrLoadResources[
 	src={acronyms},
 	sort={pt-BR},
 	type=acronym,
-	selection=all,
+	\selection%
 ]
 \GlsXtrLoadResources[
 	src={./authors},
 	sort={pt-BR},
 	type=authwork,
-	selection=all,
+	\selection%
 ]
 \GlsXtrLoadResources[
 	src={./abbrev},
 	sort={pt-BR},
 	type=abbreviation,
-	selection=all,
+	\selection%
 ]
