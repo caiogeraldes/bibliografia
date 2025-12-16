@@ -519,7 +519,7 @@
 	\setunit{\global\booltrue{cbx:parens}\addspace\bibopenparen}%
 	\ifnumequal{\value{citecount}}{1}{\usebibmacro{prenote}}{}%
 	\iffieldundef{shorthand}{%
-		\usebibmacro{cite:labeldate+extradate}%
+		% \usebibmacro{cite:labeldate+extradate}%
 	}{%
 		\usebibmacro{cite:shorthand}%
 	}%

@@ -15,14 +15,59 @@ a-tu-n
 \setmonofont[Scale=0.8]{Mononoki Nerd Font}
 \usepackage{hyperref}
 
-\RequirePackage[backend=biber,
-	style=./biblatex/abnt-caio, language=brazil,
-	pretty, autolang=hyphen,
-	pretty, repeatfields, noslsn, natbib, extrayear, giveninits
-]{biblatex}
-\addbibresource{./biblio.bib}
+% \RequirePackage[backend=biber,
+% 	style=./biblatex/abnt-caio, language=brazil,
+% 	pretty, autolang=hyphen,
+% 	pretty, repeatfields, noslsn, natbib, extrayear, giveninits
+% ]{biblatex}
+% \addbibresource{./biblio.bib}
+%
+% \usepackage[record,section,nomain,style=mcolalttree,stylemods={mcols}]{glossaries-extra}
+% \newglossary*{abbreviation}{Abreviações}
+% \newglossary*{authwork}{Autores e obras antigos}
+% \newglossary*{lang}{Línguas}
+% \newglossary*{gram}{Glosas}
+% \newglossary*{acronym}{Acrônimos}
+%
+% \GlsXtrLoadResources[
+% 	src={gloss},
+% 	sort={pt-BR},
+%   match={entrytype={abbreviation}},
+%   type={same as category},
+%   selection=all
+% ]
+% \GlsXtrLoadResources[
+%   src={acronyms},
+%   sort={pt-BR},
+%   type=acronym,
+%   selection=all,
+% ]
+% \GlsXtrLoadResources[
+% 	src={./authors},
+% 	sort={pt-BR},
+%   type=authwork,
+%   selection=all,
+% ]
+% \GlsXtrLoadResources[
+% 	src={./abbrev},
+% 	sort={pt-BR},
+%   type=abbreviation,
+%   selection=all,
+% ]
+
+\usepackage{bibliocaiera}
+
 
 \begin{document}
+
+\chapter*{Abreviações, acrônimos, glosas}
+\glssetwidest[0]{StuBoTkkk}
+\printunsrtglossary[type=abbreviation,style=alttree]
+\printunsrtglossary[type=authwork]
+\printunsrtglossary[type=lang]
+\printunsrtglossary[type=gram]
+\printunsrtglossary[type=acronym]
+
 \nocite{*}
 \renewcommand*{\mkbibnamefamily}[1]{\textsc{#1}}
 \printbibliography{}
