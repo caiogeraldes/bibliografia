@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{bibliocaiera}[2025-12-16 Bibliocaiera]
 
-\newcommand{\selection}{}
+\newcommand{\selection}{selection={recorded and deps and see}}
 \DeclareOption{all}{\renewcommand{\selection}{selection=all}}
 \ProcessOptions\relax
 
@@ -48,7 +48,6 @@
 
 \GlsXtrLoadResources[
 	src={authors},
-	selection={recorded and deps and see},
 	set-widest,
 	type=index,
 	label-prefix={idx.},
@@ -71,4 +70,5 @@
 		},
 	abbreviation-name-fallback={long},
 	symbol-sort-fallback={name},
+	\selection%
 ]
