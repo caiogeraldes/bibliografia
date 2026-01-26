@@ -12,7 +12,7 @@
 ]{biblatex}
 \addbibresource{./biblio.bib}
 
-\RequirePackage[record,section,nomain,style=mcolalttree,stylemods={mcols}]{glossaries-extra}
+\RequirePackage[record,index,section,nomain,style=mcolalttree,stylemods={mcols,bookindex}]{glossaries-extra}
 \newglossary*{abbreviation}{Abreviações}
 \newglossary*{authwork}{Autores e obras antigos}
 \newglossary*{lang}{Línguas}
@@ -32,15 +32,43 @@
 	type=acronym,
 	\selection%
 ]
-\GlsXtrLoadResources[
-	src={./authors},
-	sort={pt-BR},
-	type=authwork,
-	\selection%
-]
+% \GlsXtrLoadResources[
+% 	src={./authors},
+% 	sort={pt-BR},
+% 	type=authwork,
+% 	\selection%
+% ]
 \GlsXtrLoadResources[
 	src={./abbrev},
 	sort={pt-BR},
 	type=abbreviation,
 	\selection%
+]
+
+
+\GlsXtrLoadResources[
+	src={authors},
+	selection={recorded and deps and see},
+	set-widest,
+	type=index,
+	label-prefix={idx.},
+	dual-prefix={},
+	cs-label-prefix={},
+	combine-dual-locations={primary},
+	dual-field,
+	sort={en},
+	sort-field={name},
+	dual-type={same as category},
+	dual-sort={en},
+	dual-sort-number-pad={2},
+	dual-sort-pad-plus={1},
+	dual-sort-pad-minus={0},
+	dual-break-at=upper-upper-word,
+	entry-type-aliases={
+			abbreviation=dualindexabbreviation,
+			entry=dualindexentry,
+			acronym=acronym,
+		},
+	abbreviation-name-fallback={long},
+	symbol-sort-fallback={name},
 ]
