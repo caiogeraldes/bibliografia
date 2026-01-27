@@ -15,7 +15,9 @@
 \RequirePackage[record,index,section,nomain,style=mcolalttree,stylemods={mcols,bookindex}]{glossaries-extra}
 \newglossary*{abbreviation}{Abreviações}
 \newglossary*{authwork}{Autores e obras antigos}
+\newglossary*{passagens}{Autores, obras e passagens citadas}
 \newglossary*{lang}{Línguas}
+\newglossary*{linguas}{Línguas}
 \newglossary*{gram}{Glosas}
 \newglossary*{acronym}{Acrônimos}
 
@@ -49,7 +51,7 @@
 \GlsXtrLoadResources[
 	src={authors,passagens},
 	set-widest,
-	type=index,
+	type=passagens,
 	label-prefix={idx.},
 	dual-prefix={},
 	cs-label-prefix={},
@@ -77,3 +79,28 @@
 
 \newcommand{\passagemcorpus}[1]{\gls{idx.#1} = \glsentryuseri{idx.#1}}
 \newcommand{\passagem}[1]{\gls{idx.#1}}
+
+
+\GlsXtrLoadResources[
+	src={linguas},
+	set-widest,
+	type=linguas,
+	label-prefix={idx.},
+	dual-prefix={},
+	cs-label-prefix={},
+	combine-dual-locations={primary},
+	dual-field,
+	sort={pt-BR},
+	sort-field={name},
+	dual-type={same as category},
+	dual-sort={pt-BR},
+	dual-sort-number-pad={2},
+	dual-sort-pad-plus={1},
+	dual-sort-pad-minus={0},
+	dual-break-at=upper-upper-word,
+	entry-type-aliases={
+			lingua=dualindexabbreviation
+		},
+	abbreviation-name-fallback={long},
+	\selection%
+]
