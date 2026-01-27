@@ -47,7 +47,7 @@
 
 
 \GlsXtrLoadResources[
-	src={authors},
+	src={authors,passagens},
 	set-widest,
 	type=index,
 	label-prefix={idx.},
@@ -67,8 +67,12 @@
 			abbreviation=dualindexabbreviation,
 			entry=dualindexentry,
 			acronym=acronym,
+			passage=index
 		},
 	abbreviation-name-fallback={long},
 	symbol-sort-fallback={name},
 	\selection%
 ]
+
+\newcommand{\passagemcorpus}[1]{\gls{idx.#1} = \glsentryuseri{idx.#1}}
+\newcommand{\passagem}[1]{\gls{idx.#1}}
